@@ -1,93 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Mirrored from votelkg.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Nov 2023 10:10:20 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voting</title>
-  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-  .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Background</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.title {
-  color: black;
-  font-size: 18px;
+body {
+  font-family: Playfair Display, sans-serif;
+  background: #f1f1f1;
 }
 
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
+.home {
+  height: 100vh;
+  position: relative;
+}
+video {
+  object-fit: cover;
+  position: absolute;
   width: 100%;
-  font-size: 18px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
 }
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(0,0,0,0.6);
 }
-
-button:hover, a:hover {
-  opacity: 0.7;
+.home-content {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+  top: 150px;
+  color: #fff;
+  z-index: 3;
 }
-.fa {
-  padding: 5px;
-  font-size: 30px;
-  width: 25px;
+.home-content h1 {
+  font-family: Playfair Display, serif;
   text-align: center;
-  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 85px;
+  line-height: 1.1;
 }
-
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
+.middle-line {
+  height: 200px;
+  width: 2px;
+  background: #fff;
+  margin: 40px auto;
 }
-
-/* Set a specific color for each brand */
-
-/* Facebook */
-.fa-facebook {
-  background: #3B5998;
-  color: white;
+.home-content button {
+  display: block;
+  font-size: 20px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  background: transparent;
+  color: #fff;
+  margin: 50px auto 0;
+  padding: 16px 30px;
+  cursor: pointer;
 }
-.fa-instagram {
-  background: pink;
-  color: white;
-}
-</style>
-</head>
-<body>
-  
-  <div class="card">
-    <h3>PLEASE I NEED YOUR VOTE
-</h3>
-<video width="300px" height="250px" controls="controls" autoplay>
+    </style>
+  </head>
+  <body>
 
-        <source src="https://youtu.be/vDcD7u9QW7Q?si=nLAno9ix5gQ6nKi3" type="video/mp4" />
-       </video>
-    <h4>Voting</h3>
-    <p class="title">
-   
-        Vote with <a href='monetize.html'><i class="fa fa-facebook"></i></a>
-      <br>
-        <!-- Vote with <a href="gmail.html"><i class="fa fa-google"></i></a> -->
-    </p>
-    <p>Total Votes: 894 out of 1000</p>
-    <p>Total Votes To Win: 106</p>
-  </div>
-</body>
+      <div class="home">
+        <video autoplay muted loop>
+          <source src="votelkg.netlify.app\images\Sephora Squad.mp4" type="video/mp4" />
+        </video>
+        <div class="overlay"></div>
+        <div class="home-content">
+          <p>Sephora Squad is a content creation community of beauty connoisseurs, <br> unique thinkers, fired-up enthusiasts, fearless
+          creatives, and wildly curious experimenters from all backgrounds and <br> audience sizes. Sound like you?</p>
+          <div class="middle-line"></div>
+          <button>VOTE NOW</button>
+        </div>
+      </div>
 
-<!-- Mirrored from votelkg.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Nov 2023 10:10:33 GMT -->
+  </body>
 </html>
